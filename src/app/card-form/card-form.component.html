@@ -1,0 +1,11 @@
+<form [formGroup] = "cardForm" class="field"> 
+    <app-input [control] = "cardForm.get('name')"></app-input>
+</form>
+
+
+
+<hr>
+
+<div>Form Content: {{ cardForm.value | json}}</div>
+<div>Form is Valid: {{ cardForm.valid}}</div>
+<div>Errors: {{cardForm.get('name').errors | json}}</div>
